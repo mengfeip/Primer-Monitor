@@ -1,0 +1,29 @@
+#Datasource
+nextclade: "data/nextclade_Clade-II.tsv"
+metadata: "data/metadata.tsv"
+
+#Build
+reference: "NC_063383.1"
+tableau_clades: "Clade-II"
+igv_primers:
+  - "MPOX-CDC"
+  - "CladeIIJ2RL"
+  - "MPXVgE3L"
+  - "MPXVgeneric"
+  - "NVOE9L"
+  - "OPX3E9L"
+  - "VIDRLMPXV"
+  - "VIDRLOPX"
+igv_main: "Clade-IIb"
+igv_sub1: "A*"
+igv_sub2: "B*"
+genome: "reference/Clade-II/NC063383.bed"
+ref_fasta: "reference/Clade-II/NC063383.fasta"
+ref_gff: "reference/Clade-II/RefGene.gff3"
+
+#IGV_Sites
+chrom: 2
+start: 3
+end: 4
+flank: 200000
+template: "script/igv_reports/templates/variant_template.html"

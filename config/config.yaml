@@ -1,0 +1,22 @@
+#Datasource
+nextclade: "data/nextclade_All.tsv"
+metadata: "data/metadata.tsv"
+
+#Build
+reference: "NC_063383.1"
+tableau_clades: "All"
+igv_primers:
+  - "MPOX-CDC"
+igv_main: "ALL"
+igv_sub1: "Clade-I"
+igv_sub2: "Clade-II"
+genome: "reference/Clade-II/NC063383.bed"
+ref_fasta: "reference/Clade-II/NC063383.fasta"
+ref_gff: "reference/Clade-II/RefGene.gff3"
+
+#IGV_Sites
+chrom: 2
+start: 3
+end: 4
+flank: 200000
+template: "script/igv_reports/templates/variant_template.html"

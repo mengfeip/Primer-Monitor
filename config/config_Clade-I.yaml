@@ -1,0 +1,30 @@
+#Datasource
+nextclade: "data/nextclade_Clade-I.tsv"
+metadata: "data/metadata.tsv"
+
+#Build
+reference: "DQ011155.1"
+tableau_clades: "Clade-I"
+igv_primers:
+  - "MPOX-CDC"
+  - "CladeICCP"
+  - "CladeIIJ2RL"
+  - "MPXVgE3L"
+  - "MPXVgeneric"
+  - "NVOE9L"
+  - "OPX3E9L"
+  - "VIDRLMPXV"
+  - "VIDRLOPX"
+igv_main: "Clade-I"
+igv_sub1: "Ia"
+igv_sub2: "Ib"
+genome: "reference/Clade-I/DQ011155.bed"
+ref_fasta: "reference/Clade-I/DQ011155.fasta"
+ref_gff: "reference/Clade-I/RefGene.gff3"
+
+#IGV_Sites
+chrom: 2
+start: 3
+end: 4
+flank: 200000
+template: "script/igv_reports/templates/variant_template.html"
