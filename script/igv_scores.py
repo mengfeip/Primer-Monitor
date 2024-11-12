@@ -78,10 +78,10 @@ if __name__=="__main__":
         intersect[line[3]] = line[0:6]
         intersect[line[3]][4] = 0
     for i in list(intersect.keys()):
-        if int(intersect[i][4]) > 1:
+        if float(intersect[i][4]) > 1:
             line = "\t".join(list(map(str,intersect[i]))+[intersect[i][1],intersect[i][1],"255,0,0\n"])
             open(args.output_monitor,'a').writelines(line)
-        elif 0<int(intersect[i][4])<=1:
+        elif 0<float(intersect[i][4])<=1:
             line = "\t".join(list(map(str,intersect[i]))+[intersect[i][1],intersect[i][1],"255,128,0\n"])
             open(args.output_monitor,'a').writelines(line)
         else:
