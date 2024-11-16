@@ -21,10 +21,16 @@ if __name__=="__main__":
     site.loc[site['Site']=="OPG057/F13L",'Strand'] = '.'
     site.loc[site['Site']=="OPG065/E3L",'Strand'] = '.'
     site.loc[site['Site']=="OPG071/E9L",'Strand'] = '.'
+    site.loc[site['Site']=="tag048/F13L",'Strand'] = '.'
+    site.loc[site['Site']=="tag055/E3L",'Strand'] = '.'
+    site.loc[site['Site']=="tag062/E9L",'Strand'] = '.'
     site.loc[site['Site']=="MPXV Genome",['Total Score','Impact Rank']] = None
     site.loc[site['Site']=="OPG057/F13L",['Total Score','Impact Rank']] = None
     site.loc[site['Site']=="OPG065/E3L",['Total Score','Impact Rank']] = None
     site.loc[site['Site']=="OPG071/E9L",['Total Score','Impact Rank']] = None
+    site.loc[site['Site']=="tag048/F13L",['Total Score','Impact Rank']] = None
+    site.loc[site['Site']=="tag055/E3L",['Total Score','Impact Rank']] = None
+    site.loc[site['Site']=="tag062/E9L",['Total Score','Impact Rank']] = None
     columns = ['Tracked Site','Reference','Start','End','Strand','Total Score','Impact Rank']
     site_display = site[columns]
     site_display.to_csv(args.output_site,sep='\t',index=False)
