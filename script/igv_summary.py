@@ -19,7 +19,7 @@ if __name__=="__main__":
     parser.add_argument('--output-summary', type=str, required=True, help="output final summary")
     args = parser.parse_args()
 
-    PRIMER = "Primer Set: " + args.param_primer
+    PRIMER = args.param_primer
     Pv_MAIN = "Prevalence in " + args.param_main
     Pv_SUB1 = "Prevalence in " + args.param_sub1
     Pv_SUB2 = "Prevalence in " + args.param_sub2
@@ -38,9 +38,9 @@ if __name__=="__main__":
             site.loc[i,'Impact Score'] = f"{site.loc[i,'Raw Score']:.3f}"
             site.loc[i,Pv_MAIN] = f"{site.loc[i,'Prevalence']:.3f}%"
             if re.search(r"\-",site.loc[i,'Mutation']):
-                site.loc[i,'Variant Description'] = "Deletion: " + re.sub("-","",site.loc[i,'Mutation']) + "bp"
+                site.loc[i,'Variant Description'] = "Deletion: " + re.sub(r"\-","",site.loc[i,'Mutation']) + "bp"
             elif re.search(r"\+",site.loc[i,'Mutation']):
-                site.loc[i,'Variant Description'] = "Insertion: " + re.sub("+","",site.loc[i,'Mutation']) + "bp"
+                site.loc[i,'Variant Description'] = "Insertion: " + re.sub(r"\+","",site.loc[i,'Mutation']) + "bp"
             else:
                 site.loc[i,'Variant Description'] = "SNP: " + str(site.loc[i,'End']) + site.loc[i,'Mutation']
             for j in range(0,len(sub1)):
@@ -57,5 +57,5 @@ if __name__=="__main__":
                     site.loc[i,Pv_SUB2] = "Not Present"
         columns = [PRIMER,'Variant Description','Impact Score',Pv_MAIN,Pv_SUB1,Pv_SUB2,'Start','End','Reference']
         summary = site[columns]
-        summary = summary.sort_values(by=['Variant Description',PRIMER])
+        summary = summary.sort_values(by=[PRIMER,'Variant Description'])
     summary.to_csv(args.output_summary,sep='\t',index=False)
