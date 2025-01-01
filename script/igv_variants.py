@@ -21,7 +21,7 @@ def variants(cluster):
         if lineage == "A":
             nc_sub = nc[nc["lineage"].str.contains("A",na=False)]
         elif lineage == "B":
-            nc_sub = nc[nc["lineage"].str.contains("B|C",na=False)]
+            nc_sub = nc[nc["lineage"].str.contains("B|C|D|E|F",na=False)]
     else:
         file_name = cluster
         nc_sub = nc[nc["lineage"]==cluster]
