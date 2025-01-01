@@ -7,6 +7,7 @@ reference: "NC_063383.1"
 tableau_clades: "All"
 igv_primers:
   - "MPOX-CDC"
+  - "Regions"
 igv_main: "ALL"
 igv_sub1: "Clade-I"
 igv_sub2: "Clade-II"

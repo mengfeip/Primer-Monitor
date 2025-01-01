@@ -15,6 +15,7 @@ igv_primers:
   - "OPX3E9L"
   - "VIDRLMPXV"
   - "VIDRLOPX"
+  - "Regions"
 igv_main: "Clade-I"
 igv_sub1: "Ia"
 igv_sub2: "Ib"
